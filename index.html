@@ -1,20 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social Media</title>
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>blink</title>
+    <link rel="icon" href="/src/assets/icons/logo.png" type="image/png" sizes="16x16">
+    <meta name="description"
+        content="blink is a social media platform that helps people connect. In the blink of an eye, you're connected.">
+    <link rel="stylesheet" href="dist/css/index.css">
 </head>
+
 <body>
-    <header>
-        <h1>Social Media</h1>
-    </header>
-    <main>
+    <header></header>
+    <main class="container-sm">
 
+        <div class="row align-items-center justify-content-center mt-5">
+
+            <section id="showcase" class="col-md-6">
+                <div class=" text-center text-md-start">
+                    <div class="d-flex align-items-center justify-content-md-start justify-content-center gap-1">
+                        <h1 class="title-font display-2">blink</h1>
+                        <img src="/src/assets/icons/logo.png" alt="Blink logo" height="50" />
+                    </div>
+                    <p class="h5">In the <span class="title-font">blink</span> of an eye, you're connected.</p>
+                </div>
+            </section>
+
+            <section id="authForm" class="col-md-6">
+                <form action="/src/profile/index.html" class="card container-sm bg-white p-4 gap-4">
+                    <div class="form-floating">
+                        <input type="email" name="email" id="email" class="form-control"
+                            placeholder="email@example.com" />
+                        <label for="email">email adress</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" name="password" id="password" minlength="8" class="form-control"
+                            placeholder="Password" />
+                        <label for="password">password</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary rounded-pill">Log In</button>
+                    <div class="text-center">
+                        <button type="submit" class="btn btn-link btn-sm">Register</button>
+                    </div>
+                </form>
+            </section>
+
+        </div>
     </main>
-    <footer>
 
-    </footer>
+    <footer></footer>
 </body>
+
 </html>
