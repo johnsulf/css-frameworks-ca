@@ -5,13 +5,13 @@ export function capitalize(string) {
 // Post HTML element
 export function renderPostHtml(user, post) {
     const hashtags = post.hashTags.join(' ');
-    return `<div class="container card bg-white border-0 my-3">
+    return `<div class="container card bg-white border-0 my-3 position-relative">
                 <div class="row">
                     <a href="../profile/index.html?uid=${user.uid}" class="col-2 m-2 p-1 text-center">
                         <img src="${user.profilePic}" alt="Profile picture of ${user.displayName}" class="profile-pic sm">
                     </a>
                     <div class="col mt-2 p-1">
-                        <strong>${user.displayName}</strong>
+                        <strong>${user.displayName}</strong><small class="text-muted fs-">&nbsp;&nbsp;${post.timeStamp}</small>
                         <p>${post.message}</p>
                         <strong>${hashtags}</strong>
                     </div>

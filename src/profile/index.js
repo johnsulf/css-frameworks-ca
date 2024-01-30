@@ -20,15 +20,19 @@ posts.forEach(post => {
     }
 });
 
+posts.sort((a, b) => {
+    return new Date(b.timeStamp) - new Date(a.timeStamp);
+});
+
 // Render profile info
 profileInfo.innerHTML = `<div class="row align-items-center justify-content-center">
-                            <div class="col-5">
+                            <div class="col-6">
                                 <h1 class="m-0">${user.name}</h1>
                                 <p class="m-0 fw-bold">@${user.displayName}</p>
                                 <p class="m-0 text-muted">${user.location}</p>
-                                <p class="m-0 text-muted">✍🏼 Member since: ${user.joinedDate}</p>
+                                <p class="m-0 text-muted">👤 ${user.bio}</p>
                             </div>
-                            <div class="col-5 d-flex justify-content-end">
+                            <div class="col-4 d-flex justify-content-end">
                                 <img src="${user.profilePic}" alt="Profile picture of John Doe" class="profile-pic lg">
                             </div>
                         </div>`;
