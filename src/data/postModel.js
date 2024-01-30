@@ -1,19 +1,19 @@
-export class PostModel {
-    constructor({ id, displayName, profilePic, message, hashTags, likes, comments }) {
+export class Post {
+    constructor({ id, uid, timeStamp, message, hashTags, likes, comments }) {
         this.id = id;
-        this.displayName = displayName;
-        this.profilePic = profilePic;
+        this.uid = uid;
+        this.timeStamp = timeStamp;
         this.message = message;
         this.hashTags = hashTags;
         this.likes = likes;
         this.comments = comments;
     }
 
-    fromJson(json) {
-        return new PostModel({
+    static fromJson(json) {
+        return new Post({
             id: json.id,
-            displayName: json.displayName,
-            profilePic: json.profilePic,
+            uid: json.uid,
+            timeStamp: json.timeStamp,
             message: json.message,
             hashTags: json.hashTags,
             likes: json.likes,

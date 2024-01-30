@@ -12,40 +12,44 @@
 </head>
 
 <body>
-    <header></header>
-    <main class="container-sm">
+    <main>
 
-        <div class="row align-items-center justify-content-center mt-5">
+        <div class="container-md my-5">
+            <div class="row align-items-center">
 
-            <section id="showcase" class="col-md-6">
-                <div class=" text-center text-md-start">
-                    <div class="d-flex align-items-center justify-content-md-start justify-content-center gap-1">
-                        <h1 class="title-font display-2">blink</h1>
-                        <img src="/src/assets/icons/logo.png" alt="Blink logo" height="50" />
+                <!-- h1, logo and slogan -->
+                <section id="showcase" class="col-md-6">
+                    <div class="text-center text-md-start">
+                        <div class="d-flex align-items-center justify-content-md-start justify-content-center gap-1">
+                            <h1 class="title-font display-2">blink</h1>
+                            <img src="/src/assets/icons/logo.png" alt="Blink logo" height="50" />
+                        </div>
+                        <p class="h5">In the <span class="title-font">blink</span> of an eye,<br> you're connected.</p>
                     </div>
-                    <p class="h5">In the <span class="title-font">blink</span> of an eye, you're connected.</p>
-                </div>
-            </section>
+                </section>
 
-            <section id="authForm" class="col-md-6">
-                <form action="/src/profile/index.html" class="card container-sm bg-white p-4 gap-4">
-                    <div class="form-floating">
-                        <input type="email" name="email" id="email" class="form-control"
-                            placeholder="email@example.com" />
-                        <label for="email">email adress</label>
-                    </div>
-                    <div class="form-floating">
-                        <input type="password" name="password" id="password" minlength="8" class="form-control"
-                            placeholder="Password" />
-                        <label for="password">password</label>
-                    </div>
-                    <button type="submit" class="btn btn-primary rounded-pill">Log In</button>
-                    <div class="text-center">
-                        <button type="submit" class="btn btn-link btn-sm">Register</button>
-                    </div>
-                </form>
-            </section>
+                <!-- login/register form-->
+                <section id="authForm" class="col-md-6">
+                    <form action="/src/profile/index.html?uid=1" class="card bg-white p-4 gap-4">
+                        <div class="form-floating">
+                            <input type="hidden" name="uid" value="1">
+                            <input type="email" name="email" id="email" class="form-control"
+                                placeholder="email@example.com" />
+                            <label for="email" class="text-muted">email adress</label>
+                        </div>
+                        <div class="form-floating">
+                            <input type="password" name="password" id="password" minlength="8" class="form-control"
+                                placeholder="Password" />
+                            <label for="password" class="text-muted">password</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary rounded-pill">Log In</button>
+                        <div class="text-center">
+                            <button type="submit" class="btn btn-link btn-sm">Register</button>
+                        </div>
+                    </form>
+                </section>
 
+            </div>
         </div>
     </main>
 
