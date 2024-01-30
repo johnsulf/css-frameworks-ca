@@ -1,6 +1,6 @@
 import { posts } from '../data/posts.js';
 import { users } from '../data/users.js';
-import { capitalize, renderPostHtml } from '../js/helpers.js';
+import { capitalize, renderPostHtml, renderFollowerFollowingCard } from '../js/helpers.js';
 
 // Query string
 const queryString = document.location.search;
@@ -40,7 +40,7 @@ profileInfo.innerHTML = `<div class="row align-items-center justify-content-cent
 // Render content for Followers- and Following tab
 function renderTabContent(tab, tabString) {
     tab.innerHTML = `<strong>${capitalize(tabString)}</strong>
-                        <span class="badge bg-secondary mx-1 fw-normal">${user[tabString]}</span>
+                        <span class="badge bg-secondary mx-1 fw-normal">${user[tabString].length}</span>
                     </strong>`;
 }
 
@@ -50,4 +50,15 @@ renderTabContent(followingTab, "following");
 // Render posts
 userPosts.forEach(post => {
     profilePosts.innerHTML += renderPostHtml(user, post);
+});
+
+// Render content for followers- and following tab panes
+user.followers.forEach(follower => {
+    const followerUser = users.find(user => user.uid == follower);
+    followersTabPane.innerHTML += renderFollowerFollowingCard(followerUser);
+});
+
+user.following.forEach(following => {
+    const followingUser = users.find(user => user.uid == following);
+    followingTabPane.innerHTML += renderFollowerFollowingCard(followingUser);
 });

@@ -54,8 +54,6 @@ export const posts = [
         likes: 30,
         comments: 7,
     }),
-
-    // Sherlock Holmes (uid: 5)
     Post.fromJson({
         id: 7,
         uid: 5,
@@ -74,8 +72,6 @@ export const posts = [
         likes: 40,
         comments: 8,
     }),
-
-    // Atticus Finch (uid: 6)
     Post.fromJson({
         id: 9,
         uid: 6,
@@ -94,8 +90,6 @@ export const posts = [
         likes: 28,
         comments: 4,
     }),
-
-    // Jane Eyre (uid: 7)
     Post.fromJson({
         id: 11,
         uid: 7,
@@ -114,8 +108,6 @@ export const posts = [
         likes: 26,
         comments: 5,
     }),
-
-    // Jay Gatsby (uid: 8)
     Post.fromJson({
         id: 13,
         uid: 8,
@@ -134,8 +126,6 @@ export const posts = [
         likes: 38,
         comments: 9,
     }),
-
-    // Hester Prynne (uid: 9)
     Post.fromJson({
         id: 15,
         uid: 9,

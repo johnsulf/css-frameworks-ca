@@ -2,6 +2,7 @@ import { User } from "./userModel.js"
 
 export const users = [
 
+
     User.fromJson({
         uid: 1,
         name: "John Doe",
@@ -11,8 +12,8 @@ export const users = [
         bio: "I'm John Doe!",
         location: "🇳🇴 Bergen, Norway",
         joinedDate: "June 2021",
-        followers: 4,
-        following: 15,
+        followers: [2, 3, 4, 5],
+        following: [3, 4, 6, 7, 8, 9],
     }),
     User.fromJson({
         uid: 2,
@@ -23,8 +24,8 @@ export const users = [
         bio: "I'm Susan Doe!",
         location: "🇺🇸 Suville, US",
         joinedDate: "June 2024",
-        followers: 8,
-        following: 12,
+        followers: [1, 3, 5],
+        following: [1, 4, 5, 6],
     }),
     User.fromJson({
         uid: 3,
@@ -35,8 +36,8 @@ export const users = [
         bio: "I'm The Artful Dodger!",
         location: "🇬🇧 London, UK",
         joinedDate: "June 2021",
-        followers: 29,
-        following: 1,
+        followers: [1, 2, 4],
+        following: [5, 6, 7, 8, 9],
     }),
     User.fromJson({
         uid: 4,
@@ -47,8 +48,8 @@ export const users = [
         bio: "Ardent reader and quick-witted individual with a penchant for irony.",
         location: "🇬🇧 Hertfordshire, UK",
         joinedDate: "January 2023",
-        followers: 31,
-        following: 27,
+        followers: [1, 2, 3, 5],
+        following: [1, 2, 3, 6, 7, 8, 9],
     }),
     User.fromJson({
         uid: 5,
@@ -59,8 +60,8 @@ export const users = [
         bio: "Consulting detective with a flair for the impossible.",
         location: "🇬🇧 London, UK",
         joinedDate: "March 2022",
-        followers: 105,
-        following: 50,
+        followers: [1, 2, 3, 4],
+        following: [1, 2, 4, 6, 7, 8],
     }),
     User.fromJson({
         uid: 6,
@@ -71,8 +72,8 @@ export const users = [
         bio: "Lawyer, father, and a believer in justice and integrity.",
         location: "🇺🇸 Maycomb, AL, USA",
         joinedDate: "May 2023",
-        followers: 52,
-        following: 13,
+        followers: [1, 2, 3, 4, 5, 7, 8],
+        following: [1, 5, 7],
     }),
     User.fromJson({
         uid: 7,
@@ -83,8 +84,8 @@ export const users = [
         bio: "Governess with a strong moral compass and a love for freedom and equality.",
         location: "🇬🇧 Thornfield, UK",
         joinedDate: "December 2022",
-        followers: 47,
-        following: 18,
+        followers: [1, 2, 3, 4, 5, 6, 8],
+        following: [1, 2, 3, 8, 9],
     }),
     User.fromJson({
         uid: 8,
@@ -95,8 +96,8 @@ export const users = [
         bio: "The enigmatic host of West Egg's most extravagant parties.",
         location: "🇺🇸 West Egg, NY, USA",
         joinedDate: "July 2021",
-        followers: 76,
-        following: 22,
+        followers: [1, 2, 4, 5, 6],
+        following: [4, 5, 6, 7, 9],
     }),
     User.fromJson({
         uid: 9,
@@ -107,7 +108,7 @@ export const users = [
         bio: "Embroiderer and bearer of the scarlet letter.",
         location: "🇺🇸 Boston, MA, USA",
         joinedDate: "November 2023",
-        followers: 19,
-        following: 5,
+        followers: [1, 2, 4, 6, 7, 8],
+        following: [1, 3, 4, 7, 8],
     }),
 ]

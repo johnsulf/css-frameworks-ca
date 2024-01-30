@@ -35,22 +35,39 @@
         <!-- Tab-bar for selecting view -->
         <section id="tabBar" class="container">
             <ul class="nav nav-tabs">
-                <li class="nav-item col-4 text-center">
-                    <a class="nav-link active" aria-current="page" href="#">
+                <li class="nav-item col-4 text-center" role="presentation">
+                    <a class="nav-link active" id="postsTab" data-bs-toggle="tab" data-bs-target="#postsTabPane"
+                        type="button" role="tab" aria-controls="postsTabPane" aria-selected="true">
                         <strong>Posts</strong>
                     </a>
                 </li>
-                <li class="nav-item col-4 text-center">
-                    <a class="nav-link" id="followersTab" href="#"></a>
+                <li class="nav-item col-4 text-center" role="presentation">
+                    <a class="nav-link" id="followersTab" data-bs-toggle="tab" data-bs-target="#followersTabPane"
+                        type="button" role="tab" aria-controls="followersTabPane" aria-selected="false"></a>
                 </li>
-                <li class="nav-item col-4 text-center">
-                    <a class="nav-link" id="followingTab" href="#"></a>
+                <li class="nav-item col-4 text-center" role="presentation">
+                    <a class="nav-link" id="followingTab" data-bs-toggle="tab" data-bs-target="#followingTabPane"
+                        type="button" role="tab" aria-controls="followingTabPane" aria-selected="false"></a>
                 </li>
             </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="postsTabPane" role="tabpanel" aria-labelledby="posts-tab"
+                    tabindex="0">
+                    <section id="profilePosts" class="container"></section>
+                </div>
+                <div class="tab-pane fade" id="followersTabPane" role="tabpanel" aria-labelledby="followers-tab"
+                    tabindex="0">
+                    <h2>Followers</h2>
+                </div>
+                <div class="tab-pane fade" id="followingTabPane" role="tabpanel" aria-labelledby="following-tab"
+                    tabindex="0">
+                    <h2>Following</h2>
+                </div>
+            </div>
         </section>
 
         <!-- Posts -->
-        <section id="profilePosts" class="container"></section>
+
     </main>
 
     <script type="module" src="./index.js"></script>

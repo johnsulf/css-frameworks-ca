@@ -22,3 +22,23 @@ export function renderPostHtml(user, post) {
                 </div>
             </div>`;
 }
+
+// Follower/Followers card HTML element
+export function renderFollowerFollowingCard(followerUser) {
+    return `<div class="container card bg-white border-0 my-3">
+                <a href="../profile/index.html?uid=${followerUser.uid}" class="text-decoration-none">
+                    <div class="row align-items-center justify-content-between py-2">
+                        <div class="col-2 text-center">
+                            <img src="${followerUser.profilePic}" alt="Profile picture of ${followerUser.displayName}" class="profile-pic sm">
+                        </div>
+                        <div class="col-8">
+                            <p class="m-0 fw-bold text-dark">${followerUser.name}</p>
+                            <p class="m-0 text-muted">@${followerUser.displayName}</p>
+                        </div>
+                        <div class="col-2 text-center">
+                            <i class="bi bi-arrow-right"></i>
+                        </div>    
+                    </div>
+                </a>
+            </div>`;
+}
