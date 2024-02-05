@@ -1,1 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Keania+One&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 
+
+
+$primary: #202C59;
+$body-bg: #f8f8f8;
+
+$font-family-sans-serif: 'Roboto Condensed', sans-serif;
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+    max-width: 900px;
+    margin: auto;
+}
+
+.title-font {
+    font-family: 'Keania One', cursive;
+    color: $primary;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.lg {
+    height: 100px;
+    width: 100px;
+}
+
+.md {
+    height: 75px;
+    width: 75px;
+}
+
+.sm {
+    height: 50px;
+    width: 50px;
+}
+
+.pointer {
+    cursor: pointer;
+}
