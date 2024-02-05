@@ -11,17 +11,13 @@ const uid = params.get('uid');
 const user = users.find(user => user.uid == uid);
 
 // initializing posts arrays
-const userPosts = [];
+let userPosts = [];
 
 // populating userPosts array
 posts.forEach(post => {
-    if (post.uid == uid) {
+    if (post.uid == user.uid) {
         userPosts.push(post);
     }
-});
-
-posts.sort((a, b) => {
-    return new Date(b.timeStamp) - new Date(a.timeStamp);
 });
 
 // Render profile info
