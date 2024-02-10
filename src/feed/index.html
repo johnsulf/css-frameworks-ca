@@ -47,14 +47,18 @@
             </div>
         </section>
 
-        <div class="d-flex justify-content-end">
-            <i class="bi bi-filter h2 mx-3"></i>
+        <div class="d-flex justify-content-end dropdown">
+            <i class="bi bi-filter h2 mx-3 btn btn-secondary dropdown-toggle" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false"></i>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item" role="button">Oldest first</li>
+                <li class="dropdown-item" role="button">Newest first</li>
+            </ul>
         </div>
 
         <!-- Feed posts -->
         <section id="feedPosts"></section>
     </main>
-
 
     <!-- Search Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
