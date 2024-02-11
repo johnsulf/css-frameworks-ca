@@ -7,8 +7,9 @@ Blink is a front-end application made for the CSS Frameworks Courseassignment. T
 
 - Auth page with HTML form validation
 - Profile page with info and a tab-bar with posts-, followers- and following views.
-- Feed page with search, new post-form and a list with posts from all users
-- Mock API to get users and posts.
+- Profile picture with full view in modal
+- Feed page with search, new post-form and, list with posts from all users and filter button
+- Mock API to get users and posts - inspired by litterature!
 - Layout is built using Bootstraps grid system
 
 ## Built With
