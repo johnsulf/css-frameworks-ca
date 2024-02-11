@@ -1,6 +1,6 @@
-import { posts } from '../data/posts.js';
-import { users } from '../data/users.js';
-import { capitalize, renderPostHtml, renderFollowerFollowingCard } from '../js/helpers.js';
+import { posts } from '../../data/posts.js';
+import { users } from '../../data/users.js';
+import { capitalize, renderPostHtml, renderFollowerFollowingCard } from '../../js/helpers.js';
 
 // Query string
 const queryString = document.location.search;
@@ -29,9 +29,23 @@ profileInfo.innerHTML = `<div class="row align-items-center justify-content-cent
                                 <p class="m-0 text-muted">👤 ${user.bio}</p>
                             </div>
                             <div class="col-4 d-flex justify-content-end">
-                                <img src="${user.profilePic}" alt="Profile picture of John Doe" class="profile-pic lg">
+                                <img src="${user.profilePic}" alt="Profile picture of ${user.name}" class="profile-pic lg" data-bs-toggle="modal" data-bs-target="#imageModal">
                             </div>
-                        </div>`;
+                        </div>
+                        
+                        <div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-xl">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="imageModalLabel">Profile picture of ${user.name} <span class="text-muted">@${user.displayName}</span></h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="${user.profilePic}" alt="Profile picture of ${user.name}" class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
 
 // Render content for Followers- and Following tab
 function renderTabContent(tab, tabString) {
@@ -58,3 +72,7 @@ user.following.forEach(following => {
     const followingUser = users.find(user => user.uid == following);
     followingTabPane.innerHTML += renderFollowerFollowingCard(followingUser);
 });
+
+// initialize tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))

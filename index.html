@@ -28,14 +28,16 @@
 
                 <!-- login/register form-->
                 <section id="authForm" class="col-md-6">
-                    <form action="/src/profile/index.html?uid=1" class="card bg-white p-4 gap-4" onsubmit="">
+                    <form action="/src/pages/profile/" class="card bg-white p-4 gap-4">
                         <div class="form-floating">
                             <input type="hidden" name="uid" value="1">
-                            <input type="email" name="email" id="email" class="form-control" placeholder="email@example.com" required />
+                            <input type="email" name="email" id="email" class="form-control"
+                                placeholder="email@example.com" required />
                             <label for="email" class="text-muted">email address</label>
                         </div>
                         <div class="form-floating">
-                            <input type="password" name="password" id="password" minlength="8" class="form-control" placeholder="Password" required />
+                            <input type="password" name="password" id="password" minlength="8" class="form-control"
+                                placeholder="Password" required />
                             <label for="password" class="text-muted">password</label>
                         </div>
                         <button type="submit" class="btn btn-primary rounded-pill">Log In</button>
